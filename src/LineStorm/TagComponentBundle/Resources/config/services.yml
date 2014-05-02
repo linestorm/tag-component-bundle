@@ -1,0 +1,27 @@
+parameters:
+  linestorm.content.component.tag.class:       LineStorm\TagComponentBundle\Component\TagComponent
+
+services:
+
+  #
+  # Component
+  linestorm.content.component.tag:
+    class: %linestorm.content.component.tag.class%
+    tags:
+      - { name: linestorm.content.component }
+
+  #
+  # Widget Types
+  linestorm.content.component.tag.tag_widget:
+        class: LineStorm\TagComponentBundle\Form\Type\TagType
+        arguments: [@linestorm.cms.model_manager]
+        tags:
+            - { name: form.type, alias: tag }
+
+  #
+  # Form Types
+  linestorm.content.component.tag.form:
+        class: LineStorm\TagComponentBundle\Form\TagType
+        arguments: [@linestorm.cms.model_manager]
+        tags:
+            - { name: form.type, alias: linestorm_component_tag }
