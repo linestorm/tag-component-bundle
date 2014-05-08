@@ -4,8 +4,8 @@ namespace LineStorm\TagComponentBundle\Component;
 
 use LineStorm\Content\Component\AbstractMetaComponent;
 use LineStorm\Content\Component\ComponentInterface;
-use LineStorm\PostBundle\Model\Tag;
 use LineStorm\Content\Component\View\ComponentView;
+use LineStorm\TagComponentBundle\Model\Tag;
 use Symfony\Component\Config\Loader\Loader;
 use Symfony\Component\Form\FormBuilderInterface;
 
