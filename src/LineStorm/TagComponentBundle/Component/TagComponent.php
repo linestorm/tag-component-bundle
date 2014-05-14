@@ -18,8 +18,21 @@ use Symfony\Component\Form\FormBuilderInterface;
  */
 class TagComponent extends AbstractMetaComponent implements ComponentInterface
 {
-    protected $name = 'Tag';
-    protected $id = 'tags';
+    /**
+     * @inheritdoc
+     */
+    public function getId()
+    {
+        return 'tags';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getName()
+    {
+        return  'Tag';
+    }
 
     /**
      * @inheritdoc
