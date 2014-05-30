@@ -74,6 +74,17 @@ class TagComponent extends AbstractMetaComponent implements ComponentInterface
         ;
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function getFormFields()
+    {
+        return array('tags');
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function getRoutes(Loader $loader)
     {
         return $loader->import('@LineStormTagComponentBundle/Resources/config/routing.yml', 'yaml');
