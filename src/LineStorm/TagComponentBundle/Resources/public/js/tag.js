@@ -12,7 +12,7 @@ define(['jquery', 'select2'], function ($, select2) {
     });
 
     // add ckeditor to all the pre-loaded articles
-    $('.post-component-item.item-tags').each(function(){
+    $('.content-component-item.item-tags').each(function(){
         $(this).trigger('widget-init');
     });
 });
